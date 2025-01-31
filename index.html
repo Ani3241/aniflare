@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIFLARE - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --purple: #8A2BE2;
+            --blue: #4169E1;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--purple), var(--blue));
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            height: 300px;
+            margin-right: 2rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .anime-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .anime-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .anime-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .anime-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .anime-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--purple);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .anime-title {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--purple), var(--blue));
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .download-btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--purple), var(--blue));
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .telegram-link {
+            display: inline-block;
+            background: white;
+            color: var(--purple);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .telegram-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+            
+            .logo {
+                height: 30px;
+            }
+            
+            nav {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="ANIFLARE Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="search.html">Search</a>
+        </nav>
+    </header>
+
+    <div class="anime-container">
+        <h1 style="color: var(--purple); margin: 2rem 0; text-align: center;">Latest Anime Releases</h1>
+        <div class="anime-grid">
+            <!-- Anime Card 1 -->
+            <div class="anime-card">
+                <img src="anime1.jpg" alt="Demon Slayer" class="anime-image">
+                <div class="card-content">
+                    <h3 class="anime-title">Demon Slayer: Kimetsu no Yaiba</h3>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+
+            <!-- Anime Card 2 -->
+            <div class="anime-card">
+                <img src="anime2.jpg" alt="Jujutsu Kaisen" class="anime-image">
+                <div class="card-content">
+                    <h3 class="anime-title">Jujutsu Kaisen 2</h3>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+
+            <!-- Add more anime cards as needed -->
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://t.me/aniflare" class="telegram-link">Join Our Telegram Channel</a>
+        <p style="margin-top: 1rem;">Copyright © 2025-2030. All Rights Reserved by ANIFLARE</p>
+    </footer>
+</body>
+</html>
